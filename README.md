@@ -83,8 +83,10 @@ JavaScript Updates
 ## Usage
 
 - Go to the Calendar web application
-- Click on each hour in order to input and save events for your typical work day (9am-5pm)
+- The top of the webpage displays the Work Day Scheduler title, a short description, the day of the week and date (i.e. Monday, July 10th, 2023)
+- Click on each hour in order to input events and click the save button to save events for your typical work day (9am-5pm)
 - Events in GREY already happened, events in RED are happening currently and events in GREEN are new events to occur later that day
+- When the events are saved, they are saved on the user's local storage (whatever local device they are using)
 
 ## Credits
 
