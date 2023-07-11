@@ -1,7 +1,21 @@
+// This variable will display today's day and date in the header section
+
+var todayDate = moment().format('dddd, MMM Do YYYY');
+$("#currentDay").html(todayDate);
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+
+$(document).ready(function () {
+  // Added listener for click events on the save button
+  $(".saveBtn").on("click", function() {
+    var text = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    // This will save the text in the user's local storage
+    localStorage.setItem(time, text);
+  })
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
