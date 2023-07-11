@@ -84,6 +84,7 @@ JavaScript Updates
 
 - Go to the Calendar web application
 - Click on each hour in order to input and save events for your typical work day (9am-5pm)
+- Events in GREY already happened, events in RED are happening currently and events in GREEN are new events to occur later that day
 
 ## Credits
 
