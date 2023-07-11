@@ -1,7 +1,7 @@
 // This variable will display today's day and date in the header section
 
 var todayDate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").html(todayDate);
+$("#currentDay").text(todayDate);
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
@@ -16,6 +16,36 @@ $(document).ready(function () {
     // This will save the text in the user's local storage
     localStorage.setItem(time, text);
   })
+
+  function timeTracker() {
+    // This will get the current number of hours
+    var timeNow = moment().hour();
+
+    // This will loop over the time blocks
+    $(".time-block").each(function () {
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+        // To check the time and add the classes for background indicators
+        if (blockTime < timeNow) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        }
+        else if (blockTime === timeNow) {
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        }
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+
+        }
+    })
+  }
+
+  
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
