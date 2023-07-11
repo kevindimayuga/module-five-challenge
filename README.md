@@ -41,7 +41,7 @@ THEN the saved events persist
 
 ## Webpage Screenshot
 
-![module three challenge webpage screenshot](./assets/images/kevindimayuga.github.io_module-three-challenge.png)
+![module five challenge webpage screenshot](./assets/images/kevindimayuga.github.io_module-five-challenge.png)
 
 ## Table of Contents
 
