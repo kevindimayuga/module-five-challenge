@@ -1,4 +1,4 @@
-# Module 5 Challenge - Work Day Scheduler
+# Work Day Scheduler
 
 This repo is for module five's challenge assignment.
 
@@ -36,12 +36,12 @@ THEN the saved events persist
 
 ## Accessing the Repo or Webpage:
 
-- GitHub Repo URL: https://github.com/kevindimayuga/module-five-challenge
-- GitHub Pages WebPage Deployment URL: https://kevindimayuga.github.io/module-five-challenge/
+- GitHub Repo URL: https://github.com/kevindimayuga/work-day-scheduler-kd
+- GitHub Pages WebPage Deployment URL: https://kevindimayuga.github.io/work-day-scheduler-kd/
 
 ## Webpage Screenshot
 
-![module five challenge webpage screenshot](./assets/images/kevindimayuga.github.io_module-five-challenge.png)
+![work day scheduler webpage screenshot](./assets/images/kevindimayuga.github.io_work-day-scheduler-kd.png)
 
 ## Table of Contents
 
