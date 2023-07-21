@@ -24,14 +24,22 @@ for (let i = 0; i < hourSlots.length; i++) {
   // this if function will allow for each hourSlot to 
   // apply css styles to the time-block divs accordingly
   if (currentHour === hour) {
-    timeBlocks[i].classList.add('present');
-  } else if(currentHour < hour){
-    timeBlocks[i].classList.add('future');
-  } else if(currentHour > hour) {
-    timeBlocks[i].classList.add('past');
+    hourSlots[i].classList.add('present');
+  } 
+  else if(currentHour < hour){
+    hourSlots[i].classList.add('future');
+  } 
+  else if(currentHour > hour) {
+    hourSlots[i].classList.add('past');
+  // saves the text the user inputs in eac hourSlot to localStorage and when page is refreshed
+  let textArea = hourSlots[i].querySelector('.description');
+  textArea.value = localStorage.getItem(hour)
+  hourSlots[i].querySelector('.saveBtn').addEventListener("click",function () {
+    console.log(textArea.value);
+    localStorage.setItem(hour, textArea.value);
+    })
   }
 }
-
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
