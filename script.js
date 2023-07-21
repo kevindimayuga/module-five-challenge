@@ -1,7 +1,10 @@
 // This variable will display today's day and date in the header section
 
-var todayDate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").text(todayDate);
+var todayDate = document.querySelector('#currentDay')
+todayDate.textContent = dayjs().format('dddd, MMMM D, YYYY, h:m a')
+
+// var todayDate = moment().format('dddd, MMM Do YYYY');
+// $("#currentDay").text(todayDate);
 
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
