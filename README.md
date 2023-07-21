@@ -39,7 +39,13 @@ THEN the saved events persist
 - GitHub Repo URL: https://github.com/kevindimayuga/work-day-scheduler-kd
 - GitHub Pages WebPage Deployment URL: https://kevindimayuga.github.io/work-day-scheduler-kd/
 
-## Webpage Screenshot
+## Webpage GIF and Screenshot
+
+Webpage GIF
+
+![work day scheduler webpage gif](./assets/images/kevindimayuga.github.io_work-day-scheduler-kd-gif.gif)
+
+Webpage Screenshot
 
 ![work day scheduler webpage screenshot](./assets/images/kevindimayuga.github.io_work-day-scheduler-kd.png)
 
