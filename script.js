@@ -3,6 +3,8 @@
 var todayDate = document.querySelector('#currentDay')
 todayDate.textContent = dayjs().format('dddd, MMMM D, YYYY, h:m a')
 
+var currentHour = dayjs().hour()
+
 // var todayDate = moment().format('dddd, MMM Do YYYY');
 // $("#currentDay").text(todayDate);
 
@@ -17,7 +19,17 @@ var hourSlots = document.querySelectorAll('.time-block')
 for (let i = 0; i < hourSlots.length; i++) {
   // Log each hourSlot in the array to the Console in DevTools
   console.log(hourSlots[i]);
-  
+  let hour = parseInt(hourSlots[i].id.substring(5));
+  console.log(hour);
+  // this if function will allow for each hourSlot to 
+  // apply css styles to the time-block divs accordingly
+  if (currentHour === hour) {
+    timeBlocks[i].classList.add('present');
+  } else if(currentHour < hour){
+    timeBlocks[i].classList.add('future');
+  } else if(currentHour > hour) {
+    timeBlocks[i].classList.add('past');
+  }
 }
 
 
