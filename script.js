@@ -31,7 +31,9 @@ for (let i = 0; i < hourSlots.length; i++) {
   } 
   else if(currentHour > hour) {
     hourSlots[i].classList.add('past');
-  // saves the text the user inputs in eac hourSlot to localStorage and when page is refreshed
+  // saves the text the user inputs in each hourSlot to localStorage and when page is refreshed
+  // When page is refreshed or if the user exits and reopens the web app,
+  // the text the user inputted should still be there
   let textArea = hourSlots[i].querySelector('.description');
   textArea.value = localStorage.getItem(hour)
   hourSlots[i].querySelector('.saveBtn').addEventListener("click",function () {
