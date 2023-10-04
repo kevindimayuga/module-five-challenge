@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-This repo is for module five's challenge assignment.
+M5 - This repo is a Calendar application that allows users to save events for each hour of a typical working day (9am-5pm).
 
 ## Description
 
