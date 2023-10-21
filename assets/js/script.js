@@ -1,7 +1,7 @@
 // This variable will display today's day and date in the header section
 
 var todayDate = document.querySelector('#currentDay')
-todayDate.textContent = dayjs().format('dddd, MMMM D, YYYY, h:m a')
+todayDate.textContent = dayjs().format('dddd, MMMM D, YYYY, h:mm a')
 
 var currentHour = dayjs().hour()
 
@@ -20,6 +20,7 @@ for (let i = 0; i < hourSlots.length; i++) {
   // Log each hourSlot in the array to the Console in DevTools
   console.log(hourSlots[i]);
   let hour = parseInt(hourSlots[i].id.substring(5));
+  let textArea = hourSlots[i].querySelector('.description');
   console.log(hour);
   // this if function will allow for each hourSlot to 
   // apply css styles to the time-block divs accordingly
@@ -34,11 +35,10 @@ for (let i = 0; i < hourSlots.length; i++) {
   // saves the text the user inputs in each hourSlot to localStorage and when page is refreshed
   // When page is refreshed or if the user exits and reopens the web app,
   // the text the user inputted should still be there
-  let textArea = hourSlots[i].querySelector('.description');
-  textArea.value = localStorage.getItem(hour)
+  textArea.value = localStorage.getItem('hour-' + hour)
   hourSlots[i].querySelector('.saveBtn').addEventListener("click",function () {
     console.log(textArea.value);
-    localStorage.setItem(hour, textArea.value);
+    localStorage.setItem('hour-' + hour, textArea.value);
     })
   }
 }
